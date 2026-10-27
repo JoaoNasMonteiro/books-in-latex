@@ -3,11 +3,11 @@
 \usepackage{fontspec}
 \setmainfont{Libertinus Serif}
 
-\usepackage[english,french]{babel}
+\usepackage[polutonikogreek, latin, french, english]{babel}
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{booktabs}
-\usepackage[normalem]{ulem} % Resolve o erro "Undefined control sequence \ul"
+\usepackage[normalem]{ulem}
 \usepackage[hidelinks]{hyperref}
 \usepackage[inner=3cm, outer=2cm, top=2.5cm, bottom=2.5cm, headheight=45pt, headsep=0.8cm]{geometry}
 \usepackage{microtype}
@@ -25,104 +25,63 @@
 
 \begin{document}
 
-\subsection{POPULAR TALES}
+\frontmatter
 
-\emph{This is a volume in the Arno Press collection}
+\begin{titlingpage}
+    \vspace*{5cm}
+    \begin{center}
+        {\LARGE \scshape Popular Tales} \\
+        \vspace{1cm}
+        {\large \textit{International Folklore}}
+    \end{center}
+\end{titlingpage}
 
-\subsection{INTERNATIONAL FOLKLORE}
+\begin{titlingpage}
+    \begin{center}
+        \vspace*{2cm}
+        {\Huge \scshape Perrault's Popular Tales} \\
+        \vspace{1.5cm}
+        {\Large \textit{Edited from the original editions, \\ with Introduction, \&c.}} \\
+        \vspace{1.5cm}
+        {\Large by} \\
+        \vspace{0.5cm}
+        {\Large \textbf{Andrew Lang, M.A.}} \\
+        \vspace{2cm}
 
-\emph{Advisory Editor}\\
-Richard M. Dorson
+%        \includegraphics[width=2.5cm]{1757544686185818120_oxfordname2.png} \\
 
-\emph{Editorial Board}\\
-Issachar Ben Ami\\
-Vilmos Voigt
+        \vspace{1cm}
+        {\large At the Clarendon Press} \\
+        {\large MDCCCLXXXVIII}
+    \end{center}
+\end{titlingpage}
 
-\emph{See last pages of this volume\\
-for a complete list of titles}
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
 
-\subsection{POPULAR TALES}
+\noindent
+\textbf{Reprint Edition 1977 by Arno Press Inc.} \\
+Reprinted from a copy in The Princeton University Library. \\
+\textit{International Folklore} -- Advisory Editor: Richard M. Dorson.
 
-\subsection{Charles Perrault}
-
-\paragraph{\texorpdfstring{Edited by\\ Andrew Lang}{Edited by Andrew Lang}}
-
-%\includegraphics{1757544686185818120_arno1.png}
-
-ARNO PRESS\\
-A New York Times Company\\
+\vspace{0.5cm}
+\noindent
+%\includegraphics[width=1.5cm]{1757544686185818120_arno1.png} \\
+ARNO PRESS \\
+A New York Times Company \\
 New York / 1977
 
-Editorial Supervision: LUCILLE MAIORCA
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Reprint Edition 1977 by Arno Press Inc.
-
-Reprinted from a copy in\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}The
-Princeton University Library
-
-INTERNATIONAL FOLKLORE\\
-ISBN for complete set: 0-405-10077-9\\
-See last pages of this volume for titles.
-
-Manufactured in the United States of America
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\textbf{Library of Congress Cataloging in Publication Data}
-
-Perrault, Charles, 1628-1703.\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Popular
-tales.
-
-~~~~(International folklore)\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Translation
-of selected tales from Contes.\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}Reprint
-of the 1888 ed. published by the Clarendon Press, Oxford.\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}I.
-Lang, Andrew, 1844-1912.~~~~ II. Title.~~~~ III. Series.\\
-PQ1877.A25 1977~~~~398.2~~~~77-70607\\
+\vspace{0.5cm}
+\noindent
+Library of Congress Cataloging in Publication Data \\
+Perrault, Charles, 1628-1703. \\
+Popular tales. (International folklore) \\
+Reprint of the 1888 ed. published by the Clarendon Press, Oxford. \\
 ISBN 0-405-10118-X
 
-\subsection{PERRAULT\textquotesingle S POPULAR TALES}
-
-\hypertarget{4533318093929944247_33931-h-0.htm.xhtmlux5cux23pgepubid00006}{%
-\subsubsection{\texorpdfstring{\emph{LANG}}{LANG}}\label{4533318093929944247_33931-h-0.htm.xhtmlux5cux23pgepubid00006}}
-
-London
-
-HENRY FROWDE
-
-%\includegraphics{1757544686185818120_symbol2.png}
-
-{Oxford University Press Warehouse}
-
-{Amen Corner, E.C.}
-
-\subsection{PERRAULT\textquotesingle S POPULAR TALES}
-
-EDITED
-
-\emph{FROM THE ORIGINAL EDITIONS, WITH\\
-INTRODUCTION, \&c.}
-
-BY
-
-\subsubsection{ANDREW LANG, M.A.}
-
-LATE FELLOW OF MERTON COLLEGE
-
-%\includegraphics{1757544686185818120_oxfordname2.png}
-
-AT THE CLARENDON PRESS
-
-MDCCCLXXXVIII
-
-{[}\emph{All rights reserved}{]}
-
+\newpage
+\tableofcontents*
 
 
 \newpage
@@ -175,7 +134,7 @@ never have been produced. \\
 A. L.
 
 
-\newpage
+
 \section{INTRODUCTION.}
 
 \emph{CHARLES PERRAULT.} \\
@@ -476,9 +435,9 @@ citizenship to Perrault\textquotesingle s \emph{Petit Poucet} and
 from the MS. by M. Hippolyte Lucas. \emph{Académie des Bibliophiles},
 Paris, 1868.
 
-\hypertarget{4533318093929944247_33931-h-0.htm.xhtmlux5cux23pgepubid00010}{%
-\section{PERRAULT\textquotesingle S POPULAR
-TALES.}\label{4533318093929944247_33931-h-0.htm.xhtmlux5cux23pgepubid00010}}
+\mainmatter
+
+\part{PERRAULT\textquotesingle S POPULAR TALES.}
 
 \textquotesingle Madame Coulanges, who is with me till to-morrow, was
 good enough to tell us some of the stories that they amuse the ladies
@@ -1379,11 +1338,9 @@ to this day (Sébillot in \emph{Mélusine}, May 5, 1887).
 
 
 
-\hypertarget{4533318093929944247_33931-h-0.htm.xhtmlux5cux23pgepubid00011}{%
-\chapter*{NOTES ON THE SEVERAL TALES BY
-PERRAULT, \\ AND THEIR VARIANTS.}\label{4533318093929944247_33931-h-0.htm.xhtmlux5cux23pgepubid00011}}
+\chapter[NOTES ON THE SEVERAL TALES BY PIERRAULT]{NOTES ON THE SEVERAL TALES BY PERRAULT\\[1ex] \large \itshape AND THEIR VARIANTS.}
 
-\subsection{Les Trois Souhaits.}
+\section{Les Trois Souhaits.}
 
 \emph{The Three Wishes.} \\
 
@@ -1414,7 +1371,11 @@ and Philemon entertain the gods, who convert their hut into a Temple.
 They \emph{wish} (the man is the speaker) to serve the gods in this
 fane, and that neither may outlive the other:
 
-\centerline{Nec conjugis umquam} \centerline{Busta meae videam: neu sim tumulandus ab illa.}
+\begin{verse}
+\small
+\foreignlanguage{latin}{Nec conjugis umquam \\
+Busta meae videam: neu sim tumulandus ab illa.}
+\end{verse}
 
 Their wishes are fulfilled.
 
@@ -1697,7 +1658,7 @@ Comparetti, \emph{Book of Sindibad}, p. 3. Benfey,
 \protect\hypertarget{4533318093929944247_33931-h-0.htm.xhtmlux5cux23Footnote_39}{}{}\protect\hyperlink{4533318093929944247_33931-h-0.htm.xhtmlux5cux23FNanchor_39}{{{[}39{]}}}
 \emph{Poésies de Marie de France}, vol. ii. p. 53.
 
-\subsection{La Belle au Bois Dormant.}
+\section{La Belle au Bois Dormant.}
 
 \emph{The Sleeping Beauty.} \\
 
@@ -1785,7 +1746,7 @@ Maspero, \emph{Contes Egyptiens}, p. 33.
 \protect\hypertarget{4533318093929944247_33931-h-0.htm.xhtmlux5cux23Footnote_41}{}{}\protect\hyperlink{4533318093929944247_33931-h-0.htm.xhtmlux5cux23FNanchor_41}{{{[}41{]}}}
 \emph{Contes de Ma Mère L\textquotesingle Oye}, p. 157.
 
-\subsection{Le Petit Chaperon Rouge.}
+\section{Le Petit Chaperon Rouge.}
 
 \emph{Little Red Riding Hood.} \\
 
@@ -1949,7 +1910,7 @@ Grimm, Note on 5.
 \protect\hypertarget{4533318093929944247_33931-h-0.htm.xhtmlux5cux23Footnote_47}{}{}\protect\hyperlink{4533318093929944247_33931-h-0.htm.xhtmlux5cux23FNanchor_47}{{{[}47{]}}}
 Max Müller\textquotesingle s \emph{Selected Essays}, i. 565.
 
-\subsection{La Barbe Bleue.}
+\section{La Barbe Bleue.}
 
 \emph{Blue Beard.} \\
 
@@ -2095,7 +2056,7 @@ Compare Mrs. Hunt\textquotesingle s note to Grimm, i. 389.
 \protect\hypertarget{4533318093929944247_33931-h-0.htm.xhtmlux5cux23Footnote_51}{}{}\protect\hyperlink{4533318093929944247_33931-h-0.htm.xhtmlux5cux23FNanchor_51}{{{[}51{]}}}
 Crane, p. 78.
 
-\subsection{Le Maistre Chat, ou le Chat Botté.}
+\section{Le Maistre Chat, ou le Chat Botté.}
 
 \emph{Puss in Boots.} \\
 
@@ -2701,7 +2662,7 @@ Siberian. The Swahili and Hindu versions appear to have been unknown, in
 1870, to Dr. Köhler. In 1883, Mr. Ralston, who takes the Buddhist side,
 did not know the Indian version (\emph{Nineteenth Century}, Jan. 1883).
 
-\subsection{Les Fées.}
+\section{Les Fées.}
 
 \emph{Toads and Diamonds.} \\
 
@@ -2784,7 +2745,7 @@ limitless number of combinations.
 \protect\hypertarget{4533318093929944247_33931-h-1.htm.xhtmlux5cux23Footnote_67}{}{}\protect\hyperlink{4533318093929944247_33931-h-1.htm.xhtmlux5cux23FNanchor_67}{{{[}67{]}}}
 Antoninus Liberalis, xxxv.
 
-\subsection{Cendrillon.}
+\section{Cendrillon.}
 
 \emph{Cinderella.} \\
 
@@ -3341,7 +3302,7 @@ Callaway, p. 121.
 \protect\hypertarget{4533318093929944247_33931-h-1.htm.xhtmlux5cux23Footnote_90}{}{}\protect\hyperlink{4533318093929944247_33931-h-1.htm.xhtmlux5cux23FNanchor_90}{{{[}90{]}}}
 \emph{Revue Celtique}, Jan., Nov. 1878, p. 366.
 
-\subsection{Riquet à La Houppe.}
+\section{Riquet à La Houppe.}
 
 \emph{Riquet of the Tuft.} \\
 
@@ -3396,7 +3357,7 @@ Theal\textquotesingle s \emph{Kaffir Folk Lore}, p. 37.
 \protect\hypertarget{4533318093929944247_33931-h-1.htm.xhtmlux5cux23Footnote_92}{}{}\protect\hyperlink{4533318093929944247_33931-h-1.htm.xhtmlux5cux23FNanchor_92}{{{[}92{]}}}
 \emph{Revue Critique}, July, 1874.
 
-\subsection{Le Petit Poucet.}
+\section{Le Petit Poucet.}
 
 \emph{Hop o\textquotesingle{} my Thumb.} \\
 
@@ -3742,70 +3703,80 @@ unite in similar wholes, independently combined?
 \hypertarget{4533318093929944247_33931-h-2.htm.xhtmlux5cux23pgepubid00012}{}
 \begin{otherlanguage}{french}
 
-\chapter*{HISTOIRES \\ OU \\ CONTES DU TEMPS PASSÉ}
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{part}{HISTOIRES OU CONTES DU TEMPS PASSÉ (1697)}
 
-\emph{Avec des Moralitéz.}
+\begin{center}
+    \vspace*{3cm}
+    {\LARGE \textbf{HISTOIRES \\ OU \\ CONTES DU TEMPS PASSÉ}\par}
+    \vspace{1cm}
+    {\Large \itshape Avec des Moralitéz.\par}
+    \vspace{2cm}
+    A PARIS,\\
+    Chez Claude Barbin, sur le\\
+    second Peron de la Sainte-Chapelle,\\
+    au Palais.
+    \vspace{1.5cm}
+    \emph{Avec Privilége de Sa Majesté.} \\
+    \vspace{0.5cm}
+    M.DC.XCVII.
+\end{center}
+\clearpage
 
-A PARIS,\\
-Chez {Claude Barbin}, sur le\\
-second Peron de la Sainte-Chapelle,\\
-au Palais.
+\section*{A Mademoiselle}
+\addcontentsline{toc}{section}{A Mademoiselle}
 
-\emph{Avec Privilége de Sa Majesté.}
+\begin{itshape}
+Mademoiselle,
 
-M.DC.XCVII.
+On ne trouvera pas étrange qu'un Enfant ait pris plaisir à
+composer les Contes de ce Recüeil, mais on s'étonnera qu'il ait
+eu la hardiesse de vous les presenter. Cependant, Mademoiselle,
+quelque disproportion qu'il y ait entre la simplicité de ces
+Recits, \& les lumieres de vostre esprit, si on examine bien ces
+Contes, on verra que je ne suis pas aussi blamable que je le
+parois d'abord. Ils renferment tous une Morale trés-sensée,
+\& qui se découvre plus ou moins, selon le degré de pénetration
+de ceux qui les lisent; d'ailleurs comme rien ne marque tant
+la vaste estenduë d'un esprit, que de pouvoir s'élever en
+même-temps aux plus grandes choses, \& s'abaisser aux plus
+petites; on ne sera point surpris que la même Princesse, à qui
+la Nature \& l'éducation ont rendu familier ce qu'il y a de
+plus élevé, ne dédaigne pas de prendre plaisir à de semblables
+bagatelles. Il est vray que ces Contes donnent une image de ce
+qui se passe dans les moindres Familles, où la loüable impatience
+d'instruire les enfans, fait imaginer des Histoires dépourveuës
+de raison, pour s'accommoder à ces mêmes enfans qui n'en ont
+pas encore; mais à qui convient-il mieux de connoître comment
+vivent les Peuples, qu'aux Personnes que le Ciel destine à
+les conduire ? Le desir de cette connoissance à poussé des Heros,
+\& même des Heros de vostre Race, jusque dans des huttes \& des
+cabanes, pour y voir de prés \& par eux-mêmes ce qui s'y passoit
+de plus particulier: Cette connoissance leur ayant paru necessaire
+pour leur parfaite instruction. Quoi qu'il en soit, Mademoiselle,
 
-\section{A MADEMOISELLE}
+\begin{verse}
+Pouvois-je mieux choisir pour rendre vrai-semblable \\
+Ce que la Fable à d'incroyable ? \\
+Et jamais Fée, au tems jadis \\
+Fit-elle à jeune Créature, \\
+Plus de dons, \& de dons exquis, \\
+Que vous en a fait la Nature.
+\end{verse}
 
-{Mademoiselle},
+\begin{flushright}
+Je suis avec un trés-profond respect, \\
+MADEMOISELLE, \\
+De Vôtre Altesse Royale, \\
+Le trés-humble \& \\
+trés-obéissant serviteur, \\
+P. Darmancour.
+\end{flushright}
 
-\emph{On ne trouvera pas étrange qu\textquotesingle un Enfant ait pris
-plaisir à composer les Contes de ce Recüeil, mais on
-s\textquotesingle étonnera qu\textquotesingle il ait eu la hardiesse de
-vous les presenter. Cependant}, {Mademoiselle}, \emph{quelque
-disproportion qu\textquotesingle il y ait entre la simplicité de ces
-Recits, \& les lumieres de vostre esprit, si on examine bien ces Contes,
-on verra que je ne suis pas aussi blamable que je le parois
-d\textquotesingle abord. Ils renferment tous une Morale trés-sensée, \&
-qui se découvre plus ou moins, selon le degré de pénetration de ceux qui
-les lisent; d\textquotesingle ailleurs comme rien ne marque tant la
-vaste estenduë d\textquotesingle un esprit, que de pouvoir
-s\textquotesingle élever en même-temps aux plus grandes choses, \&
-s\textquotesingle abaisser aux plus petites; on ne sera point surpris
-que la même Princesse, à qui la Nature \& l\textquotesingle éducation
-ont rendu familier ce qu\textquotesingle il y a de plus élevé, ne
-dédaigne pas de prendre plaisir à de semblables bagatelles. Il est vray
-que ces Contes donnent une image de ce qui se passe dans les moindres
-Familles, où la loüable impatience d\textquotesingle instruire les
-enfans, fait imaginer des Histoires dépourveuës de raison, pour
-s\textquotesingle accommoder à ces mêmes enfans qui n\textquotesingle en
-ont pas encore; mais à qui convient-il mieux de connoître comment vivent
-les Peuples, qu\textquotesingle aux Personnes que le Ciel destine à les
-conduire? Le desir de cette connoissance à poussé des Heros, \& même des
-Heros de vostre Race, jusque dans des huttes \& des cabanes, pour y voir
-de prés \& par eux-mêmes ce qui s\textquotesingle y passoit de plus
-particulier: Cette connoissance leur ayant paru necessaire pour leur
-parfaite instruction. Quoi qu\textquotesingle il en soit,}
-{Mademoiselle},
+\end{itshape}
 
-{Pouvois-je mieux choisir pour rendre vrai-semblable} {Ce que la Fable à
-d\textquotesingle incroyable?} {Et jamais Fée, au tems jadis} {Fit-elle
-à jeune Créature,} {Plus de dons, \& de dons exquis,} {Que vous en a
-fait la Nature.}
-
-\emph{Je suis avec un trés-profond respect,}
-
-{MADEMOISELLE},
-
-De Vôtre Altesse Royale,
-
-Le trés-humble \&
-
-trés-obéissant serviteur,
-
-{P. Darmancour.}
-
-\section{LA BELLE AU BOIS DORMANT}
+\chapter{LA BELLE AU BOIS DORMANT}
 
 \emph{CONTE.}
 
@@ -4165,7 +4136,7 @@ d\textquotesingle ardeur,} {Aspire à la foy conjugale,} {Que je
 n\textquotesingle ay pas la force ny le cœur,} {De luy prescher cette
 Morale.}}
 
-\section{LE PETIT CHAPERON ROUGE}
+\chapter{LE PETIT CHAPERON ROUGE}
 
 \emph{CONTE.}
 
@@ -4245,7 +4216,7 @@ maisons, jusque dans les ruelles; } {Mais helas! qui ne sçait que ces
 Loups doucereux, } {De tous les Loups sont les plus dangereux.}}
 
 
-\section{LA BARBE BLEUË.}
+\chapter{LA BARBE BLEUË.}
 
 Il estoit une fois un homme qui avoit de belles maisons à la Ville \& à
 la Campagne, de la vaisselle d\textquotesingle or \&
@@ -4440,7 +4411,7 @@ l\textquotesingle impossible;} {Fut-il mal-content \& jaloux,} {Prés de
 sa femme on le voit filer doux;} {Et de quelque couleur que sa barbe
 puisse estre, } {On a peine à juger qui des deux est le maistre.}}
 
-\section{LE MAISTRE CHAT, OU LE CHAT BOTTÉ}
+\chapter[LE MAISTRE CHAT]{LE MAISTRE CHAT \\[1EX] \large OU LE CHAT BOTTÉ}
 
 \emph{CONTE.}
 
@@ -4603,7 +4574,7 @@ s\textquotesingle en fait regarder avec des yeux mourans,}
 jeunesse,} {Pour inspirer de la tendresse,} {N\textquotesingle en sont
 pas des moyens toûjours indifférens.}}
 
-\section{LES FÉES.}
+\chapter{LES FÉES.}
 
 \emph{CONTE.}
 
@@ -4701,7 +4672,7 @@ Autre Moralité.
 de complaisance,} {Mais tost ou tard elle a sa récompense,} {Et souvent
 dans le temps qu\textquotesingle on y pense le moins.}}
 
-\section{CENDERILLON OU LA PETITE PANTOUFLE DE VERRE.}
+\chapter[CENDERILLION]{CENDERILLON\\ [1ex] \large OU LA PETITE PANTOUFLE DE VERRE.}
 
 \emph{CONTE.}
 
@@ -5596,7 +5567,7 @@ toute la famille.}}
 FIN.
 
 \newpage
-\subsection{Extrait du Privilége du Roy.}
+\section{Extrait du Privilége du Roy.}
 
 Par Grace \& Privilége du Roy, Donné à Fontainebleau, le 28. Octobre
 1696. Signé {Louvet}, \& Scelé: Il est permis au Sieur {P. Darmancour},
@@ -5621,7 +5592,7 @@ Syndic.
 Les Exemplaires ont esté fournis.
 
 
-\chapter*{CONTES EN VERS PAR M\textsuperscript{{r}}. PERRAULT DE L\textquotesingle ACADEMIE FRANÇOISE}
+\chapter{CONTES EN VERS PAR M\textsuperscript{{r}}. PERRAULT DE L\textquotesingle ACADEMIE FRANÇOISE}
 
 \section{PRÉFACE.}
 La manière dont le public a reçu les pièces de ce recueil, à mesure
@@ -7335,9 +7306,8 @@ FINIS.
 
 \end{otherlanguage}
 
-\hypertarget{4533318093929944247_33931-h-2.htm.xhtmlux5cux23pgepubid00034}{%
 \chapter{INTERNATIONAL
-FOLKLORE}\label{4533318093929944247_33931-h-2.htm.xhtmlux5cux23pgepubid00034}}
+FOLKLORE}
 
 \emph{An Arno Press Collection}
 
