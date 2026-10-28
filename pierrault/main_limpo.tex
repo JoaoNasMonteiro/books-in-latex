@@ -3,7 +3,7 @@
 \usepackage{fontspec}
 \setmainfont{Libertinus Serif}
 
-\usepackage[polutonikogreek, latin, french, english]{babel}
+\usepackage[polytonicgreek, latin, french, english]{babel}
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{booktabs}
@@ -24,6 +24,34 @@
 
 \setlength{\beforechapskip}{0.5cm}
 
+% ==========================================
+% CONFIGURAÇÕES DE NOTAS DE FIM (MEMOIR)
+% ==========================================
+\makepagenote
+
+% 1. DESLIGA a automação teimosa de capítulos para evitar inversões
+\renewcommand{\pagenotesubhead}[3]{}
+
+% 2. Aumenta o respiro vertical entre uma nota e outra
+\renewcommand*{\prenoteinnotes}{\par\vspace{1.5ex}\noindent}
+
+\makeatletter
+% 3. Macro para zerar as notas a cada nova Parte
+\newcommand{\resetpagenotes}{%
+  \immediate\closeout\@notefile
+  \immediate\openout\@notefile=\jobname.ent
+  \setcounter{pagenote}{0}
+}
+
+% 4. Macro MANUAIS para controle cirúrgico da lista de notas
+\newcommand{\notechapter}[1]{%
+  \addtonotes{\protect\section*{#1}}%
+}
+\newcommand{\notesection}[1]{%
+  \addtonotes{\protect\par\protect\vspace{2ex}\protect\noindent\textbf{#1}\protect\par\protect\vspace{1ex}}%
+}
+\makeatother
+% ==========================================
 \begin{document}
 
 \frontmatter
@@ -57,7 +85,7 @@
     \end{center}
 \end{titlingpage}
 
-\newpage
+\clearpage
 \thispagestyle{empty}
 \vspace*{\fill}
 
@@ -81,11 +109,12 @@ Popular tales. (International folklore) \\
 Reprint of the 1888 ed. published by the Clarendon Press, Oxford. \\
 ISBN 0-405-10118-X
 
-\newpage
+\clearpage
 \tableofcontents*
 
-\newpage
+\clearpage
 \chapter{PREFACE}
+\notechapter{PREFACE.}
 
 This edition of the stories of Perrault is intended partly
 as an introduction to the study of Popular Tales in general. The text of
@@ -136,6 +165,7 @@ never have been produced. \\
 \end{flushright}
 
 \chapter{INTRODUCTION.}
+\notechapter{INTRODUCTION.}
 
 \begin{flushright}
 \large \itshape Charles Perrault.
@@ -362,7 +392,7 @@ better poet.
 \textquotesingle Cent défauts qu\textquotesingle on impute au siècle où
 tu naquis\\
 Ne profaneroient pas tes ouvrages exquis
-\footnote{'Exquis' is good.}
+\pagenote{\textquotesingle Exquis\textquotesingle{} is good.}
 
 \end{verse}
 
@@ -396,11 +426,10 @@ me sera difficile\textquotesingle{} (June 1694). Meanwhile Perrault, in
 his comedy \emph{L\textquotesingle Oublieux}, was mocking people who
 think it a fine thing \textquotesingle to publish old books with a great
 many
-notes\pagenote{\emph{L\textquotesingle Oublieux} was written in 1691. It was printed
+notes\textquotesingle{}\pagenote{\emph{L\textquotesingle Oublieux} was written in 1691. It was printed
 from the MS. by M. Hippolyte Lucas. \emph{Académie des Bibliophiles},
-Paris, 1868.
+Paris, 1868.}.
 
-\mainmatter}.\textquotesingle{}
 But Perrault himself was about to win his own fame by publishing
 versions of old traditional Fairy Tales.
 
@@ -429,12 +458,11 @@ save Jack the Giant Killer, and who have given the full fairy
 citizenship to Perrault\textquotesingle s \emph{Petit Poucet} and
 \emph{La Barbe Bleue}.
 
-% ===================================================================
-% TODO_NOTA_MISMATCH [DEFINIÇÃO ÓRFÃ - NOTA 2]:
-% O texto abaixo pertence à nota [2], mas não há chamada (FNanchor_2) no texto.
-% Verifique no original onde encaixar este \pagenote{...}:
-\textbf{[NOTA ÓRFÃ 2:} \textquotesingle Exquis\textquotesingle{} is good.\textbf{]}
-% ===================================================================
+\clearpage
+\printpagenotes
+\resetpagenotes
+
+\mainmatter
 
 \part{PERRAULT\textquotesingle S POPULAR TALES.}
 
@@ -772,6 +800,7 @@ represents an old woman spinning, and telling tales to a man, a girl, a
 little boy, and a cat which, from its broad and intelligent grin,
 naturalists believe to be of the Cheshire breed. On a placard is written
 
+\begin{center}
 CONTES
 
 DEMA
@@ -779,6 +808,7 @@ DEMA
 MERE
 
 LOYE.
+\end{center}
 
 A copy, modified, of the engraving is printed on the cover of M. Charles
 Deulin\textquotesingle s \emph{Les Contes de Ma Mère
@@ -1232,8 +1262,10 @@ Orco,\textquotesingle{} if Orcus be \emph{Ogre} (\emph{Lettres sur les
 Contes de Fées}, p. 169-172).
 
 \chapter[NOTES ON THE SEVERAL TALES BY PIERRAULT]{NOTES ON THE SEVERAL TALES BY PERRAULT\\[1ex] \large \itshape AND THEIR VARIANTS.}
+\notechapter{NOTES ON THE SEVERAL TALES BY PIERRAULT}
 
 \section{Les Trois Souhaits.}
+\notesection{Les Trois Souhaits.}
 
 \emph{The Three Wishes.} \\
 
@@ -1534,6 +1566,7 @@ says Clough, better inspired than Perrault\textquotesingle s
 \emph{Bucheron}.
 
 \section{La Belle au Bois Dormant.}
+\notesection{La Belle au Bois Dormant.}
 
 \emph{The Sleeping Beauty.} \\
 
@@ -1616,6 +1649,7 @@ mentioned M. André Lefèvre\textquotesingle s discovery that Poufle, the
 dog of the Sleeping Beauty, is the Vedic Sarama in search of the Dawn.
 
 \section{Le Petit Chaperon Rouge.}
+\notesection{Le Petit Chaperon Rouge.}
 
 \emph{Little Red Riding Hood.} \\
 
@@ -1769,6 +1803,7 @@ The cock or the robin redbreast warns her in vain, and she is swallowed.
 % ===================================================================
 
 \section{La Barbe Bleue.}
+\notesection{La Barbe Bleue.}
 
 \emph{Blue Beard.} \\
 
@@ -1903,6 +1938,8 @@ myth, nor is it safe to follow M. André Lefèvre, when he thinks that, in
 the two avenging brothers, he recognises the Vedic Asvins.
 
 \section{Le Maistre Chat, ou le Chat Botté.}
+\notesection{Le Maistre Chat, ou le Chat Botté.}
+
 
 \emph{Puss in Boots.} \\
 
@@ -2464,6 +2501,7 @@ Siberian. The Swahili and Hindu versions appear to have been unknown, in
 did not know the Indian version (\emph{Nineteenth Century}, Jan. 1883).}.
 
 \section{Les Fées.}
+\notesection{Les Fées.}
 
 \emph{Toads and Diamonds.} \\
 
@@ -2544,6 +2582,9 @@ the bits of glass in a kaleidoscope, may be shaken into a practically
 limitless number of combinations.
 
 \section{Cendrillon.}
+\notesection{Cendrillon.}
+
+
 
 \emph{Cinderella.} \\
 
@@ -3030,6 +3071,7 @@ not said to have been the mother in bestial form. (Sébillot,
 of \emph{The Black Bull o\textquotesingle{} Norroway}.
 
 \section{Riquet à La Houppe.}
+\notesection{Riquet à La Houppe.}
 
 \emph{Riquet of the Tuft.} \\
 
@@ -3079,6 +3121,7 @@ compared with a Thibetan story, analysed by M. Gaston
 Paris\pagenote{\emph{Revue Critique}, July, 1874.}.
 
 \section{Le Petit Poucet.}
+\notesection{Le Petit Poucet.}
 
 \emph{Hop o\textquotesingle{} my Thumb.} \\
 
@@ -3282,6 +3325,7 @@ Dillaye\textquotesingle s \emph{Contes de Charles Perrault} (Paris,
 1880).
 
 \section{CONCLUSION.}
+\notesection{CONCLUSION.}
 
 The study of Perrault\textquotesingle s tales which we have made serves
 to illustrate the problems and difficulties of the subject in general.
@@ -3395,12 +3439,18 @@ popular tales are all afloat, everywhere, in the imaginations of early
 and of pre-scientific men. Who can tell how often they might casually
 unite in similar wholes, independently combined?
 
-\newpage
+\clearpage
+\printpagenotes
+
+\clearpage
+\thispagestyle{empty}
+\begin{center}
 \includegraphics{image2.jpg}
+\end{center}
 
 \begin{otherlanguage}{french}
 
-\newpage
+\clearpage
 \thispagestyle{empty}
 \addcontentsline{toc}{part}{HISTOIRES OU CONTES DU TEMPS PASSÉ (1697)}
 
@@ -3424,6 +3474,7 @@ unite in similar wholes, independently combined?
 \thispagestyle{plain}
 \addcontentsline{toc}{chapter}{A Mademoiselle}
 \section*{A Mademoiselle}
+\notesection{A Mademoiselle}
 
 \begin{itshape}
 Mademoiselle,
@@ -3475,8 +3526,10 @@ P. Darmancour.
 \end{itshape}
 
 \chapter{LA BELLE AU BOIS DORMANT}
+\notechapter{LA BELLE AU BOIS DORMANT}
 
 \section{CONTE.}
+\notesection{CONTE.}
 
 Il estoit une fois un Roi \& une Reine, qui estoient si faschez de
 n\textquotesingle avoir point d\textquotesingle enfans, si faschez
@@ -3821,6 +3874,7 @@ estoit sa mere, mais il s\textquotesingle en consola bientost avec sa
 belle femme \& ses enfans. \\
 
 \section{MORALITÉ.}
+\notesection{MORALITÉ.}
 
 \begin{verse}
   \small
@@ -3841,8 +3895,10 @@ De luy prescher cette Morale.
 \end{verse}
 
 \chapter{LE PETIT CHAPERON ROUGE}
+\notechapter{LE PETIT CHAPERON ROUGE}
 
 \section{CONTE.}
+\notesection{CONTE.}
 
 Il estoit une fois une petite fille de Village, la plus jolie
 qu\textquotesingle on eut sçû voir; sa mere en estoit folle, \& sa mere
@@ -3907,6 +3963,7 @@ disant ces mots, ce méchant Loup se jetta sur le petit chaperon rouge,
 \& la mangea. \\
 
 \section{MORALITÉ.}
+\notesection{MORALITÉ.}
 
 \begin{verse}
   \small
@@ -3928,8 +3985,10 @@ De tous les Loups sont les plus dangereux.
 \end{verse}
 
 \chapter{LA BARBE BLEUË.}
+\notechapter{LA BARBE BLEUË.}
 
 \section{CONTE.}
+\notesection{CONTE.}
 
 Il estoit une fois un homme qui avoit de belles maisons à la Ville \& à
 la Campagne, de la vaisselle d\textquotesingle or \&
@@ -4107,6 +4166,7 @@ marier elle-mesme à un fort honneste homme, qui luy fit oublier le
 mauvais temps qu\textquotesingle elle avoit passé avec la Barbe bleuë. \\
 
 \section{MORALITÉ.}
+\notesection{MORALITÉ.}
 
 \begin{verse}
   \small
@@ -4136,8 +4196,10 @@ On a peine à juger qui des deux est le maistre.
 \end{verse}
 
 \chapter[LE MAISTRE CHAT]{LE MAISTRE CHAT \\[1EX] \large OU LE CHAT BOTTÉ}
+\notechapter{LE MAISTRE CHAT}
 
 \section{CONTE.}
+\notesection{CONTE.}
 
 Un Meusnier ne laissa pour tout biens à trois enfans
 qu\textquotesingle il avoit, que son Moulin, son Asne, \& son Chat. Les
@@ -4283,6 +4345,7 @@ jour épousa la Princesse. Le Chat devint grand Seigneur, \& ne courut
 plus aprés les souris, que pour se divertir. \\
 
 \section{MORALITÉ.}
+\notesection{MORALITÉ.}
 \begin{verse}
   \small
 Quelque grand que soit l\textquotesingle avantage, \\
@@ -4294,7 +4357,7 @@ Vallent mieux que des biens acquis.
 
 \end{verse}
 
-\section{Autre Moralité.}
+\subsection{Autre Moralité.}
 
 \begin{verse}
   \small
@@ -4308,8 +4371,10 @@ N\textquotesingle en sont pas des moyens toûjours indifférens.
 \end{verse}
 
 \chapter{LES FÉES.}
+\notechapter{LES FÉES.}
 
 \section{CONTE.}
+\notesection{CONTE.}
 
 Il estoit une fois une veuve qui avoit deux filles,
 l\textquotesingle aînée luy ressembloit si fort \&
@@ -4394,6 +4459,7 @@ couru sans trouver personne qui voulut la recevoir, alla mourir au coin
 d\textquotesingle un bois.
 
 \section{MORALITÉ.}
+\notesection{MORALITÉ.}
 
 \begin{verse}
   \small
@@ -4415,8 +4481,10 @@ Et souvent dans le temps qu\textquotesingle on y pense le moins.
 \end{verse}
 
 \chapter[CENDERILLION]{CENDERILLON\\ [1ex] \large OU LA PETITE PANTOUFLE DE VERRE.}
+\notechapter{CENDERILLION}
 
 \section{CONTE.}
+\notesection{CONTE.}
 
 Il estoit une fois un Gentil-homme qui épousa en secondes nopces une
 femme, la plus haütaine \& la plus fiere qu\textquotesingle on eut
@@ -4640,6 +4708,7 @@ aussi bonne que belle, fit loger ses deux sœurs au Palais, \& les maria
 dés le jour même à deux grands Seigneurs de la Cour.
 
 \section{MORALITÉ.}
+\notesection{MORALITÉ.}
 
 La beauté pour le sexe est un rare tresor, \\
 De l\textquotesingle admirer jamais on ne se lasse; \\
@@ -5326,7 +5395,7 @@ Qui fera le bonheur de toute la famille.
   {\LARGE \scshape FIN.}
 \end{center}
 
-\newpage
+\clearpage
 \thispagestyle{plain}
 \addcontentsline{toc}{chapter}{Extrait du Privilége du Roy.}
 \section*{Extrait du Privilége du Roy.}
@@ -5361,7 +5430,7 @@ Les Exemplaires ont esté fournis.
 \end{flushright}
 \end{itshape}
 
-\part[CONTES EN VERS PAR M\textsuperscript{{r}}.]{CONTES EN VERS PAR M\textsuperscript{{r}}. PERRAULT\\ [1ex] \large DE L\textquotesingle ACADEMIE FRANÇOISE}
+\part[CONTES EN VERS PAR M\textsuperscript{{r}}. PIERRAULT]{CONTES EN VERS PAR M\textsuperscript{{r}}. PERRAULT\\ [1ex] \large DE L\textquotesingle ACADEMIE FRANÇOISE}
 
 \chapter{PRÉFACE.}
 La manière dont le public a reçu les pièces de ce recueil, à mesure
